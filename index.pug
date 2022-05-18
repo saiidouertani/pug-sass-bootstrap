@@ -1,0 +1,198 @@
+doctype
+html(lang='en')
+  head
+    meta(name='description' ,content='pug sass bootstap')
+    meta(charset='utf-8' )
+    meta(name='viewport' content='width=device-width , initiale-scale=1.0' )
+    title My Project
+    link(rel='stylesheet' ,href='css/all.min.css')
+    link(rel='stylesheet' ,href='css/bootstrap.min.css')
+    link(rel='stylesheet' ,href='css/normalize.css')
+    link(rel='stylesheet' ,href='css/homepage.css')
+  body
+    include pug/head.pug
+    .aboutus.pt-5.pb-5
+      .container.d-flex.flex-nowrap.align-items-center
+        .about
+          h4.text-capitalize.text-center.text-sm-start about us
+          p.lh-lg.text-center.text-sm-start Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro perspiciatis quisquam itaque natus magni atque maiores, tenetur aliquid omnis? Neque, hic consequuntur. Voluptatibus, eos eveniet qui accusantium neque molestiae recusandae!
+        .imgs.d-none.d-sm-block
+          img(src="../imgs/about-us.jpg")
+
+    .ourskills.pt-5.pb-5
+      .container
+        h2.text-capitalize.text-center Our skills
+        .skill.d-flex.p-3.align-items-center.mt-3
+          h4.me-4 html
+          div.per
+            span(class="d-block" data-percentage="25%")
+        .skill.d-flex.p-3.align-items-center.mt-3
+          h4.me-4 css
+          div.per
+            span(class="d-block" data-percentage="25%")
+        .skill.d-flex.p-3.align-items-center.mt-3
+          h4.me-4 Javascript
+          div.per
+            span(class="d-block" data-percentage="25%")
+        .skill.d-flex.p-3.align-items-center.mt-3
+          h4.me-4 Sass
+          div.per
+            span(class="d-block" data-percentage="25%")
+        .skill.d-flex.p-3.align-items-center.mt-3
+          h4.me-4 Pugjs
+          div.per
+            span(class="d-block" data-percentage="25%")
+
+    .galerie.pt-5.pb-5
+      .container
+        h2.text-capitalize.text-center.pt-5.pb-5 galerie
+
+        .row
+          .imgs.col-sm-6.col-md-4.col-lg-3.mt-2
+            img(src="/imgs/01.jpg")
+          .imgs.col-sm-6.col-md-4.col-lg-3.mt-2.img-fluid
+            img(src="/imgs/02.jpg")
+          .imgs.col-sm-6.col-md-4.col-lg-3.mt-2
+            img(src="/imgs/03.jpg")
+          .imgs.col-sm-6.col-md-4.col-lg-3.mt-2
+            img(src="/imgs/about-us.jpg")
+          .imgs.col-sm-6.col-md-4.col-lg-3.mt-2
+            img(src="/imgs/04.jpg")
+          .imgs.col-sm-6.col-md-4.col-lg-3.mt-2
+            img(src="/imgs/laptop.webp")
+          .imgs.col-sm-6.col-md-4.col-lg-3.mt-2
+            img(src="/imgs/04 (1).jpg")
+          .imgs.col-sm-6.col-md-4.col-lg-3.mt-2
+            img(src="/imgs/01.png")
+    .timeline.pt-5.pb-5.text-center.text-md-start
+      .container
+        h2.text-capitalize.text-center.pt-5.pb-5 timeline
+
+        .box
+          .year.text-center 2020
+
+          .box-text.bg-white.float-md-start.p-4.rounded-3.mt-5
+            h2 avant 2020
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni culpa inventore nostrum labore voluptatum asperiores maxime nesciunt unde eaque deserunt dolorem expedita tempore repellendus natus itaque, corporis id! Neque, eligendi!
+          .clear
+          .box-text.bg-white.float-md-end.p-4.rounded-3.mt-5
+            h2 avant 2020
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni culpa inventore nostrum labore voluptatum asperiores maxime nesciunt unde eaque deserunt dolorem expedita tempore repellendus natus itaque, corporis id! Neque, eligendi!
+          .clear
+        .box.overflow-hidden
+          .year.text-center.mt-5 2022
+
+          .box-text.bg-white.float-md-start.p-4.rounded-3.mt-5
+            h2 avant 2022
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni culpa inventore nostrum labore voluptatum asperiores maxime nesciunt unde eaque deserunt dolorem expedita tempore repellendus natus itaque, corporis id! Neque, eligendi!
+          .clear
+          .box-text.bg-white.float-md-end.p-4.rounded-3.mt-5
+            h2 avant 2022
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni culpa inventore nostrum labore voluptatum asperiores maxime nesciunt unde eaque deserunt dolorem expedita tempore repellendus natus itaque, corporis id! Neque, eligendi!
+          .clear
+
+    .features.pt-5.pb-5
+      .container
+        h2.text-capitalize.text-center.pt-5.pb-5 features
+
+        .row
+          .box.text-center.col-md-6.col-lg-4.mt-5
+            .imgs.ms-auto.me-auto.mb-3 
+              img.img-fluid(src="imgs/Icon_01.png")
+            h3.mb-3 developement
+            p.text- i love programming and i will be full stack developer and i will succes dispite all problems
+
+          .box.text-center.col-md-6.col-lg-4.mt-5
+            .imgs.ms-auto.me-auto.mb-3 
+              img.img-fluid(src="imgs/Icon_01.png")
+            h3.mb-3 developement
+            p.text- i love programming and i will be full stack developer and i will succes dispite all problems
+
+          .box.text-center.col-md-6.col-lg-4.mt-5
+            .imgs.ms-auto.me-auto.mb-3 
+              img.img-fluid(src="imgs/Icon_01.png")
+            h3.mb-3 developement
+            p.text- i love programming and i will be full stack developer and i will succes dispite all problems
+
+          .box.text-center.col-md-6.col-lg-4.mt-5
+            .imgs.ms-auto.me-auto.mb-3 
+              img.img-fluid(src="imgs/Icon_01.png")
+            h3.mb-3 developement
+            p.text- i love programming and i will be full stack developer and i will succes dispite all problems
+
+          .box.text-center.col-md-6.col-lg-4.mt-5
+            .imgs.ms-auto.me-auto.mb-3 
+              img.img-fluid(src="imgs/Icon_01.png")
+            h3.mb-3 developement
+            p.text- i love programming and i will be full stack developer and i will succes dispite all problems
+
+          .box.text-center.col-md-6.col-lg-4.mt-5
+            .imgs.ms-auto.me-auto.mb-3 
+              img.img-fluid(src="imgs/Icon_01.png")
+            h3.mb-3 developement
+            p.text- i love programming and i will be full stack developer and i will succes dispite all problems
+
+    .testimonials.pt-5.pb-5
+      .container
+        h2.text-capitalize.pt-5.pb-5.text-light testimonials
+
+        .row.justify-content-evenly
+          .box.col-md-3.bg-light.rounded-3.p-3.mt-3.d-flex.flex-wrap.flex-md-column-reverse
+            .cont.d-flex.align-items-center
+              .imgs
+                img.img-fluid.rounded-circle(src="imgs/avatar-05.png")
+              .info
+                h4 saiid ouertani
+                p full stack developer
+            p.mt-2.lh-base Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, quos doloremque iure eum eos ad repudiandae voluptatum excepturi doloribus minus pariatur non praesentium quasi quam commodi maxime expedita alias aperiam?
+
+          .box.col-md-3.bg-light.rounded-3.p-3.mt-3.d-flex.flex-wrap.flex-md-column-reverse
+            .cont.d-flex.align-items-center
+              .imgs
+                img.img-fluid.rounded-circle(src="imgs/avatar-05.png")
+              .info
+                h4 saiid ouertani
+                p full stack developer
+            p.mt-2.lh-base Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, quos doloremque iure eum eos ad repudiandae voluptatum excepturi doloribus minus pariatur non praesentium quasi quam commodi maxime expedita alias aperiam?
+
+          .box.col-md-3.bg-light.rounded-3.p-3.mt-3.d-flex.flex-wrap.flex-md-column-reverse
+            .cont.d-flex.align-items-center
+              .imgs
+                img.img-fluid.rounded-circle(src="imgs/avatar-05.png")
+              .info
+                h4 saiid ouertani
+                p full stack developer
+            p.mt-2.lh-base Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, quos doloremque iure eum eos ad repudiandae voluptatum excepturi doloribus minus pariatur non praesentium quasi quam commodi maxime expedita alias aperiam?
+
+
+    .contact.pt-5.pb-5
+      .container
+        h2.text-capitalize.pt-5.pb-5.text-center contact
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    script(src="js/all.min.js")
+    script(src="js/bootstrap.bundle.min.js")
+
+
+

@@ -1,0 +1,61 @@
+.parameter.p-2
+  .color.p-3
+    h5.text-center Color
+    ul.list-unstyled.d-flex.justify-content-center.mt-5
+      - for(var i=0;i<=4;i++)
+        li
+  .randbg.p-3.mt-2
+    h5.text-capitalize.text-center random background
+    ul.list-unstyled.d-flex.justify-content-center.mt-5.text-capitalize
+      li yes
+      li.ms-2 no
+
+  .bullet.p-3.mt-2
+    h5.text-capitalize.text-center Bullets setting
+    ul.list-unstyled.d-flex.justify-content-center.mt-5.text-capitalize
+      li yes
+      li.ms-2 no
+
+
+  .reset.text-capitalize.mt-3.ms-auto.me-auto reset
+
+  .param
+    i(class="fa-solid fa-gear")
+
+
+ul.bulets
+  - for(var i=1;i<=6;i++)
+    li(class='bulet '+'link-'+i)
+
+header
+  div(class="container")
+    nav(class="navbar navbar-expand-lg navbar-dark")
+      a(class="navbar-brand" href="#") Specail design
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      div(class="collapse navbar-collapse" id="navbarSupportedContent")
+        ul(class="navbar-nav ms-auto mb-2 mb-lg-0")
+          li(class="nav-item")
+            a(class="nav-link active" aria-current="page" href="#") About
+          li(class="nav-item")
+            a(class="nav-link" href="#") skills
+          li(class="nav-item")
+            a(class="nav-link" href="#") gallery
+          li(class="nav-item")
+            a(class="nav-link" href="#") timeline
+          li(class="nav-item")
+            a(class="nav-link" href="#") features
+          li(class="nav-item")
+            a(class="nav-link" href="#") testimonials
+    .introduction.text-white
+      .text.text-center
+        h1 We Are <span> Creative </span> Agency
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odit nihil ullam nesciunt quidem iste
+    .pagescroll.d-flex.justify-content-center.mt-md-6
+      - for(var i=0;i<=5;i++)
+        span 
+
+
+
+

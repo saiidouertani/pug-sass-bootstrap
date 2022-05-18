@@ -1,0 +1,65 @@
+@mixin overlay {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-color: rgba(5, 5, 5, 0.479);
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin cercle($size, $bgc) {
+  width: $size;
+  height: $size;
+  display: block;
+  border-radius: 50%;
+  background-color: $bgc;
+}
+
+@mixin bulet($size, $bgc) {
+  width: $size;
+  height: $size;
+  display: block;
+  border-radius: 50%;
+  border: 2px solid $bgc;
+}
+
+@mixin spin {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: -35px;
+  top: 164px;
+  z-index: 1000;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  border-radius: 0% 50% 50% 0%;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin yesnobut {
+  width: 60px;
+  padding: 5px 0;
+  text-align: center;
+  color: white;
+  background-color: blue;
+  border-radius: 5px;
+}
+
+@mixin resetbutt {
+  width: 150px;
+  padding: 10px 0;
+  background-color: #f44336;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}

@@ -1,0 +1,131 @@
+.parameter {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  background-color: white;
+  width: 250px;
+  height: 100vh;
+  z-index: 10000;
+  .param {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: -35px;
+    top: 164px;
+    z-index: 1000;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    border-radius: 0% 50% 50% 0%;
+    justify-content: center;
+    align-items: center;
+  }
+  .color {
+    background-color: #eee;
+    @for $j from 1 through 5 {
+      li:nth-child(#{$j}) {
+        @include cercle(25px, nth($colors, $j));
+        &:not(:first-of-type) {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .randbg,
+  .bullet {
+    background-color: #eee;
+    li {
+      @include yesnobut;
+    }
+  }
+  .reset {
+    @include resetbutt;
+  }
+}
+
+.bulets {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  .bulet {
+    position: relative;
+    @include bulet(20px, $bluecolor);
+    &:not(:first-of-type) {
+      margin-top: 10px;
+    }
+    &:hover::after,
+    &:hover::before {
+      display: block;
+    }
+  }
+  @for $i from 1 through 6 {
+    .link-#{$i}::after {
+      content: nth($links, $i);
+      height: 25px;
+      width: 100px;
+      line-height: 25px;
+      background-color: $bluecolor;
+      color: white;
+      position: absolute;
+      left: -120px;
+      top: -6px;
+      display: none;
+    }
+    .bulet::before {
+      content: "";
+      position: absolute;
+      border: 12.5px solid;
+      border-color: transparent transparent transparent $bluecolor;
+      right: 12px;
+      top: -6px;
+      display: none;
+    }
+  }
+}
+
+header {
+  height: 100vh;
+  background: url("../../../imgs/laptop-3.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &::after {
+    @include overlay;
+  }
+  .navbar {
+    z-index: 1000;
+
+    a.active,
+    a:hover {
+      color: $bluecolor !important;
+    }
+  }
+
+  .introduction {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 100;
+    height: calc(100vh - 350px);
+    @media (min-width: 992px) {
+      height: calc(100vh - 150px);
+    }
+    @include center;
+    span {
+      color: $bluecolor;
+    }
+  }
+  .pagescroll {
+    span {
+      @include cercle(40px, white);
+      &:not(:first-of-type) {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+// Generate series of `.navbar-expand-*` responsive classes for configuring
+// where your navbar collapses.
