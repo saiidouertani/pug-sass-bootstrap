@@ -1,43 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="description" content="pug sass bootstap" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width , initiale-scale=1.0" />
+    <meta name="description" content="pug sass bootstap">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initiale-scale=1">
     <title>My Project</title>
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/homepage.css" />
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/homepage.css">
   </head>
   <body>
     <div class="parameter p-2">
       <div class="color p-3">
         <h5 class="text-center">Color</h5>
-        <ul class="list-unstyled d-flex justify-content-center mt-5">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+        <ul class="colors list-unstyled d-flex justify-content-center mt-5">
+          <li data-color="#03a9f4"></li>
+          <li data-color="#ffc107"></li>
+          <li data-color="#6610f2"></li>
+          <li data-color="#198754"></li>
+          <li data-color="red"></li>
         </ul>
       </div>
       <div class="randbg p-3 mt-2">
         <h5 class="text-capitalize text-center">random background</h5>
-        <ul
-          class="list-unstyled d-flex justify-content-center mt-5 text-capitalize"
-        >
-          <li>yes</li>
-          <li class="ms-2">no</li>
+        <ul class="list-unstyled d-flex justify-content-center mt-5 text-capitalize">
+          <li class="coloractive" data-background="yes">yes</li>
+          <li class="ms-2" data-background="no">no</li>
         </ul>
       </div>
       <div class="bullet p-3 mt-2">
         <h5 class="text-capitalize text-center">Bullets setting</h5>
-        <ul
-          class="list-unstyled d-flex justify-content-center mt-5 text-capitalize"
-        >
-          <li>yes</li>
-          <li class="ms-2">no</li>
+        <ul class="list-unstyled d-flex justify-content-center mt-5 text-capitalize">
+          <li class="coloractive" data-background="yes"> yes</li>
+          <li class="ms-2" data-background="no">no</li>
         </ul>
       </div>
       <div class="reset text-capitalize mt-3 ms-auto me-auto">reset</div>
@@ -53,52 +49,27 @@
     </ul>
     <header>
       <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-          <a class="navbar-brand" href="#">Specail design</a
-          ><button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <nav class="navbar navbar-expand-lg navbar-dark"><a class="navbar-brand" href="#">Specail design</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >About</a
-                >
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#">skills</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">gallery</a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">timeline</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">testimonials</a>
-              </li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">About</a></li>
+              <li class="nav-item"><a class="nav-link text-light" href="#">skills</a></li>
+              <li class="nav-item"><a class="nav-link text-light" href="#">gallery</a></li>
+              <li class="nav-item"><a class="nav-link text-light" href="#">timeline</a></li>
+              <li class="nav-item"><a class="nav-link text-light" href="#">features</a></li>
+              <li class="nav-item"><a class="nav-link text-light" href="#">testimonials</a></li>
             </ul>
           </div>
         </nav>
         <div class="introduction text-white">
           <div class="text text-center">
-            <h1>We Are <span> Creative </span> Agency</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus odit nihil ullam nesciunt quidem iste
-            </p>
+            <h1>We Are <span class="creative"> Creative </span> Agency</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odit nihil ullam nesciunt quidem iste</p>
           </div>
         </div>
-        <div class="pagescroll d-flex justify-content-center mt-md-6">
-          <span> </span><span> </span><span> </span><span> </span><span> </span
-          ><span> </span>
+        <div class="pagescroll d-flex justify-content-center mt-md-6"><span class="pageactive"></span><span> </span><span> </span><span> </span><span> </span>
         </div>
       </div>
     </header>
@@ -106,16 +77,9 @@
       <div class="container d-flex flex-nowrap align-items-center">
         <div class="about">
           <h4 class="text-capitalize text-center text-sm-start">about us</h4>
-          <p class="lh-lg text-center text-sm-start">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro
-            perspiciatis quisquam itaque natus magni atque maiores, tenetur
-            aliquid omnis? Neque, hic consequuntur. Voluptatibus, eos eveniet
-            qui accusantium neque molestiae recusandae!
-          </p>
+          <p class="lh-lg text-center text-sm-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro perspiciatis quisquam itaque natus magni atque maiores, tenetur aliquid omnis? Neque, hic consequuntur. Voluptatibus, eos eveniet qui accusantium neque molestiae recusandae!</p>
         </div>
-        <div class="imgs d-none d-sm-block">
-          <img src="../imgs/about-us.jpg" />
-        </div>
+        <div class="imgs d-none d-sm-block"><img src="../imgs/about-us.jpg"></div>
       </div>
     </div>
     <div class="ourskills pt-5 pb-5">
@@ -123,33 +87,23 @@
         <h2 class="text-capitalize text-center">Our skills</h2>
         <div class="skill d-flex p-3 align-items-center mt-3">
           <h4 class="me-4">html</h4>
-          <div class="per">
-            <span class="d-block" data-percentage="25%"></span>
-          </div>
+          <div class="per"><span class="d-block" data-percentage="25%"></span></div>
         </div>
         <div class="skill d-flex p-3 align-items-center mt-3">
           <h4 class="me-4">css</h4>
-          <div class="per">
-            <span class="d-block" data-percentage="25%"></span>
-          </div>
+          <div class="per"><span class="d-block" data-percentage="25%"></span></div>
         </div>
         <div class="skill d-flex p-3 align-items-center mt-3">
           <h4 class="me-4">Javascript</h4>
-          <div class="per">
-            <span class="d-block" data-percentage="25%"></span>
-          </div>
+          <div class="per"><span class="d-block" data-percentage="25%"></span></div>
         </div>
         <div class="skill d-flex p-3 align-items-center mt-3">
           <h4 class="me-4">Sass</h4>
-          <div class="per">
-            <span class="d-block" data-percentage="25%"></span>
-          </div>
+          <div class="per"><span class="d-block" data-percentage="25%"></span></div>
         </div>
         <div class="skill d-flex p-3 align-items-center mt-3">
           <h4 class="me-4">Pugjs</h4>
-          <div class="per">
-            <span class="d-block" data-percentage="25%"></span>
-          </div>
+          <div class="per"><span class="d-block" data-percentage="25%"></span></div>
         </div>
       </div>
     </div>
@@ -157,30 +111,14 @@
       <div class="container">
         <h2 class="text-capitalize text-center pt-5 pb-5">galerie</h2>
         <div class="row">
-          <div class="imgs col-sm-6 col-md-4 col-lg-3 mt-2">
-            <img src="/imgs/01.jpg" />
-          </div>
-          <div class="imgs col-sm-6 col-md-4 col-lg-3 mt-2 img-fluid">
-            <img src="/imgs/02.jpg" />
-          </div>
-          <div class="imgs col-sm-6 col-md-4 col-lg-3 mt-2">
-            <img src="/imgs/03.jpg" />
-          </div>
-          <div class="imgs col-sm-6 col-md-4 col-lg-3 mt-2">
-            <img src="/imgs/about-us.jpg" />
-          </div>
-          <div class="imgs col-sm-6 col-md-4 col-lg-3 mt-2">
-            <img src="/imgs/04.jpg" />
-          </div>
-          <div class="imgs col-sm-6 col-md-4 col-lg-3 mt-2">
-            <img src="/imgs/laptop.webp" />
-          </div>
-          <div class="imgs col-sm-6 col-md-4 col-lg-3 mt-2">
-            <img src="/imgs/04 (1).jpg" />
-          </div>
-          <div class="imgs col-sm-6 col-md-4 col-lg-3 mt-2">
-            <img src="/imgs/01.png" />
-          </div>
+          <div class="imgs col-sm-6 col-md-4 col-lg-3 mt-2"><img src="/imgs/01.jpg"></div>
+          <div class="imgs col-sm-6 col-md-4 col-lg-3 mt-2 img-fluid"><img src="/imgs/02.jpg"></div>
+          <div class="imgs col-sm-6 col-md-4 col-lg-3 mt-2"><img src="/imgs/03.jpg"></div>
+          <div class="imgs col-sm-6 col-md-4 col-lg-3 mt-2"><img src="/imgs/about-us.jpg"></div>
+          <div class="imgs col-sm-6 col-md-4 col-lg-3 mt-2"><img src="/imgs/04.jpg"></div>
+          <div class="imgs col-sm-6 col-md-4 col-lg-3 mt-2"><img src="/imgs/laptop.webp"></div>
+          <div class="imgs col-sm-6 col-md-4 col-lg-3 mt-2"><img src="/imgs/04 (1).jpg"></div>
+          <div class="imgs col-sm-6 col-md-4 col-lg-3 mt-2"><img src="/imgs/01.png"></div>
         </div>
       </div>
     </div>
@@ -191,22 +129,12 @@
           <div class="year text-center">2020</div>
           <div class="box-text bg-white float-md-start p-4 rounded-3 mt-5">
             <h2>avant 2020</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-              culpa inventore nostrum labore voluptatum asperiores maxime
-              nesciunt unde eaque deserunt dolorem expedita tempore repellendus
-              natus itaque, corporis id! Neque, eligendi!
-            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni culpa inventore nostrum labore voluptatum asperiores maxime nesciunt unde eaque deserunt dolorem expedita tempore repellendus natus itaque, corporis id! Neque, eligendi!</p>
           </div>
           <div class="clear"></div>
           <div class="box-text bg-white float-md-end p-4 rounded-3 mt-5">
             <h2>avant 2020</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-              culpa inventore nostrum labore voluptatum asperiores maxime
-              nesciunt unde eaque deserunt dolorem expedita tempore repellendus
-              natus itaque, corporis id! Neque, eligendi!
-            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni culpa inventore nostrum labore voluptatum asperiores maxime nesciunt unde eaque deserunt dolorem expedita tempore repellendus natus itaque, corporis id! Neque, eligendi!</p>
           </div>
           <div class="clear"></div>
         </div>
@@ -214,22 +142,12 @@
           <div class="year text-center mt-5">2022</div>
           <div class="box-text bg-white float-md-start p-4 rounded-3 mt-5">
             <h2>avant 2022</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-              culpa inventore nostrum labore voluptatum asperiores maxime
-              nesciunt unde eaque deserunt dolorem expedita tempore repellendus
-              natus itaque, corporis id! Neque, eligendi!
-            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni culpa inventore nostrum labore voluptatum asperiores maxime nesciunt unde eaque deserunt dolorem expedita tempore repellendus natus itaque, corporis id! Neque, eligendi!</p>
           </div>
           <div class="clear"></div>
           <div class="box-text bg-white float-md-end p-4 rounded-3 mt-5">
             <h2>avant 2022</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-              culpa inventore nostrum labore voluptatum asperiores maxime
-              nesciunt unde eaque deserunt dolorem expedita tempore repellendus
-              natus itaque, corporis id! Neque, eligendi!
-            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni culpa inventore nostrum labore voluptatum asperiores maxime nesciunt unde eaque deserunt dolorem expedita tempore repellendus natus itaque, corporis id! Neque, eligendi!</p>
           </div>
           <div class="clear"></div>
         </div>
@@ -240,64 +158,34 @@
         <h2 class="text-capitalize text-center pt-5 pb-5">features</h2>
         <div class="row">
           <div class="box text-center col-md-6 col-lg-4 mt-5">
-            <div class="imgs ms-auto me-auto mb-3">
-              <img class="img-fluid" src="imgs/Icon_01.png" />
-            </div>
+            <div class="imgs ms-auto me-auto mb-3"> <img class="img-fluid" src="imgs/Icon_01.png"></div>
             <h3 class="mb-3">developement</h3>
-            <p class="text-">
-              i love programming and i will be full stack developer and i will
-              succes dispite all problems
-            </p>
+            <p class="text-">i love programming and i will be full stack developer and i will succes dispite all problems</p>
           </div>
           <div class="box text-center col-md-6 col-lg-4 mt-5">
-            <div class="imgs ms-auto me-auto mb-3">
-              <img class="img-fluid" src="imgs/Icon_01.png" />
-            </div>
+            <div class="imgs ms-auto me-auto mb-3"> <img class="img-fluid" src="imgs/Icon_01.png"></div>
             <h3 class="mb-3">developement</h3>
-            <p class="text-">
-              i love programming and i will be full stack developer and i will
-              succes dispite all problems
-            </p>
+            <p class="text-">i love programming and i will be full stack developer and i will succes dispite all problems</p>
           </div>
           <div class="box text-center col-md-6 col-lg-4 mt-5">
-            <div class="imgs ms-auto me-auto mb-3">
-              <img class="img-fluid" src="imgs/Icon_01.png" />
-            </div>
+            <div class="imgs ms-auto me-auto mb-3"> <img class="img-fluid" src="imgs/Icon_01.png"></div>
             <h3 class="mb-3">developement</h3>
-            <p class="text-">
-              i love programming and i will be full stack developer and i will
-              succes dispite all problems
-            </p>
+            <p class="text-">i love programming and i will be full stack developer and i will succes dispite all problems</p>
           </div>
           <div class="box text-center col-md-6 col-lg-4 mt-5">
-            <div class="imgs ms-auto me-auto mb-3">
-              <img class="img-fluid" src="imgs/Icon_01.png" />
-            </div>
+            <div class="imgs ms-auto me-auto mb-3"> <img class="img-fluid" src="imgs/Icon_01.png"></div>
             <h3 class="mb-3">developement</h3>
-            <p class="text-">
-              i love programming and i will be full stack developer and i will
-              succes dispite all problems
-            </p>
+            <p class="text-">i love programming and i will be full stack developer and i will succes dispite all problems</p>
           </div>
           <div class="box text-center col-md-6 col-lg-4 mt-5">
-            <div class="imgs ms-auto me-auto mb-3">
-              <img class="img-fluid" src="imgs/Icon_01.png" />
-            </div>
+            <div class="imgs ms-auto me-auto mb-3"> <img class="img-fluid" src="imgs/Icon_01.png"></div>
             <h3 class="mb-3">developement</h3>
-            <p class="text-">
-              i love programming and i will be full stack developer and i will
-              succes dispite all problems
-            </p>
+            <p class="text-">i love programming and i will be full stack developer and i will succes dispite all problems</p>
           </div>
           <div class="box text-center col-md-6 col-lg-4 mt-5">
-            <div class="imgs ms-auto me-auto mb-3">
-              <img class="img-fluid" src="imgs/Icon_01.png" />
-            </div>
+            <div class="imgs ms-auto me-auto mb-3"> <img class="img-fluid" src="imgs/Icon_01.png"></div>
             <h3 class="mb-3">developement</h3>
-            <p class="text-">
-              i love programming and i will be full stack developer and i will
-              succes dispite all problems
-            </p>
+            <p class="text-">i love programming and i will be full stack developer and i will succes dispite all problems</p>
           </div>
         </div>
       </div>
@@ -306,71 +194,35 @@
       <div class="container">
         <h2 class="text-capitalize pt-5 pb-5 text-light">testimonials</h2>
         <div class="row justify-content-evenly">
-          <div
-            class="box col-md-3 bg-light rounded-3 p-3 mt-3 d-flex flex-wrap flex-md-column-reverse"
-          >
+          <div class="box col-md-3 bg-light rounded-3 p-3 mt-3 d-flex flex-wrap flex-md-column-reverse">
             <div class="cont d-flex align-items-center">
-              <div class="imgs">
-                <img
-                  class="img-fluid rounded-circle"
-                  src="imgs/avatar-05.png"
-                />
-              </div>
+              <div class="imgs"><img class="img-fluid rounded-circle" src="imgs/avatar-05.png"></div>
               <div class="info">
                 <h4>saiid ouertani</h4>
                 <p>full stack developer</p>
               </div>
             </div>
-            <p class="mt-2 lh-base">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem,
-              quos doloremque iure eum eos ad repudiandae voluptatum excepturi
-              doloribus minus pariatur non praesentium quasi quam commodi maxime
-              expedita alias aperiam?
-            </p>
+            <p class="mt-2 lh-base">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, quos doloremque iure eum eos ad repudiandae voluptatum excepturi doloribus minus pariatur non praesentium quasi quam commodi maxime expedita alias aperiam?</p>
           </div>
-          <div
-            class="box col-md-3 bg-light rounded-3 p-3 mt-3 d-flex flex-wrap flex-md-column-reverse"
-          >
+          <div class="box col-md-3 bg-light rounded-3 p-3 mt-3 d-flex flex-wrap flex-md-column-reverse">
             <div class="cont d-flex align-items-center">
-              <div class="imgs">
-                <img
-                  class="img-fluid rounded-circle"
-                  src="imgs/avatar-05.png"
-                />
-              </div>
+              <div class="imgs"><img class="img-fluid rounded-circle" src="imgs/avatar-05.png"></div>
               <div class="info">
                 <h4>saiid ouertani</h4>
                 <p>full stack developer</p>
               </div>
             </div>
-            <p class="mt-2 lh-base">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem,
-              quos doloremque iure eum eos ad repudiandae voluptatum excepturi
-              doloribus minus pariatur non praesentium quasi quam commodi maxime
-              expedita alias aperiam?
-            </p>
+            <p class="mt-2 lh-base">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, quos doloremque iure eum eos ad repudiandae voluptatum excepturi doloribus minus pariatur non praesentium quasi quam commodi maxime expedita alias aperiam?</p>
           </div>
-          <div
-            class="box col-md-3 bg-light rounded-3 p-3 mt-3 d-flex flex-wrap flex-md-column-reverse"
-          >
+          <div class="box col-md-3 bg-light rounded-3 p-3 mt-3 d-flex flex-wrap flex-md-column-reverse">
             <div class="cont d-flex align-items-center">
-              <div class="imgs">
-                <img
-                  class="img-fluid rounded-circle"
-                  src="imgs/avatar-05.png"
-                />
-              </div>
+              <div class="imgs"><img class="img-fluid rounded-circle" src="imgs/avatar-05.png"></div>
               <div class="info">
                 <h4>saiid ouertani</h4>
                 <p>full stack developer</p>
               </div>
             </div>
-            <p class="mt-2 lh-base">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem,
-              quos doloremque iure eum eos ad repudiandae voluptatum excepturi
-              doloribus minus pariatur non praesentium quasi quam commodi maxime
-              expedita alias aperiam?
-            </p>
+            <p class="mt-2 lh-base">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, quos doloremque iure eum eos ad repudiandae voluptatum excepturi doloribus minus pariatur non praesentium quasi quam commodi maxime expedita alias aperiam?</p>
           </div>
         </div>
       </div>

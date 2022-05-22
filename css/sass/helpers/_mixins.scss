@@ -1,11 +1,11 @@
 @mixin overlay {
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
   position: absolute;
-  background-color: rgba(5, 5, 5, 0.479);
+  background-color: rgba(5, 5, 5, 0.226);
 }
 
 @mixin center {
@@ -31,7 +31,7 @@
 }
 
 @mixin spin {
-  content: "";
+  content: '';
   position: absolute;
   width: 40px;
   height: 40px;
@@ -53,6 +53,7 @@
   color: white;
   background-color: blue;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 @mixin resetbutt {

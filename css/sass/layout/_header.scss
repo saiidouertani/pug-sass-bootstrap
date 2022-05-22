@@ -22,6 +22,9 @@
   }
   .color {
     background-color: #eee;
+    li {
+      opacity: 0.4;
+    }
     @for $j from 1 through 5 {
       li:nth-child(#{$j}) {
         @include cercle(25px, nth($colors, $j));
@@ -35,6 +38,7 @@
   .bullet {
     background-color: #eee;
     li {
+      opacity: 0.3;
       @include yesnobut;
     }
   }
@@ -51,7 +55,7 @@
   z-index: 1000;
   .bulet {
     position: relative;
-    @include bulet(20px, $bluecolor);
+    @include bulet(20px, var(--main-color));
     &:not(:first-of-type) {
       margin-top: 10px;
     }
@@ -66,7 +70,7 @@
       height: 25px;
       width: 100px;
       line-height: 25px;
-      background-color: $bluecolor;
+      background-color: var(--main-color);
       color: white;
       position: absolute;
       left: -120px;
@@ -74,10 +78,10 @@
       display: none;
     }
     .bulet::before {
-      content: "";
+      content: '';
       position: absolute;
       border: 12.5px solid;
-      border-color: transparent transparent transparent $bluecolor;
+      border-color: transparent transparent transparent var(--main-color);
       right: 12px;
       top: -6px;
       display: none;
@@ -87,7 +91,11 @@
 
 header {
   height: 100vh;
-  background: url("../../../imgs/laptop-3.webp");
+  background-image: url('../../../imgs/laptop-3.webp');
+  background-image: url('../../../imgs/laptop.webp');
+  background-image: url('../../../imgs/web-design.jpg');
+  background-image: url('../../../imgs/01.jpg');
+
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -99,7 +107,7 @@ header {
 
     a.active,
     a:hover {
-      color: $bluecolor !important;
+      color: var(--main-color) !important;
     }
   }
 
@@ -113,11 +121,13 @@ header {
       height: calc(100vh - 150px);
     }
     @include center;
-    span {
-      color: $bluecolor;
+    .creative {
+      color: var(--main-color);
     }
   }
   .pagescroll {
+    position: relative;
+    z-index: 2000;
     span {
       @include cercle(40px, white);
       &:not(:first-of-type) {
@@ -125,6 +135,16 @@ header {
       }
     }
   }
+}
+.viewparam {
+  left: 0px;
+}
+.coloractive {
+  opacity: 1 !important;
+  border: 1px solid black;
+}
+.pageactive {
+  background-color: var(--main-color) !important;
 }
 
 // Generate series of `.navbar-expand-*` responsive classes for configuring

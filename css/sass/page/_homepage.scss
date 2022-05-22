@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 4000px;
-}
-
 .aboutus {
   .about {
     flex: 1;
@@ -38,7 +34,7 @@ body {
           background-color: $bluecolor;
           position: relative;
           &::after {
-            content: "#{nth($percentage, $k)}";
+            content: '#{nth($percentage, $k)}';
             position: absolute;
             top: -40px;
             right: 0;
@@ -47,7 +43,7 @@ body {
             color: white;
           }
           &::before {
-            content: "";
+            content: '';
             position: absolute;
             top: -18px;
             right: 0;
@@ -74,7 +70,7 @@ body {
     z-index: 2000;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 2px;
       height: 100%;
@@ -99,7 +95,7 @@ body {
       position: relative;
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         @include cercle(20px, white);
         right: 50%;
@@ -109,7 +105,7 @@ body {
         border: 1px solid $bluecolor;
       }
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: -20px;
         right: 50%;
@@ -120,7 +116,7 @@ body {
       @media (min-width: 769px) {
         &.float-md-start {
           &::after {
-            content: "";
+            content: '';
             position: absolute;
             @include cercle(20px, white);
             right: -30px;
@@ -130,7 +126,7 @@ body {
             border: 1px solid $bluecolor;
           }
           &::before {
-            content: "";
+            content: '';
             position: absolute;
             top: 20px;
             right: -10px;
@@ -141,7 +137,7 @@ body {
         }
         &.float-md-end {
           &::after {
-            content: "";
+            content: '';
             position: absolute;
             @include cercle(20px, white);
             left: -30px;
@@ -151,7 +147,7 @@ body {
             border: 1px solid $bluecolor;
           }
           &::before {
-            content: "";
+            content: '';
             position: absolute;
             top: 20px;
             left: -10px;
