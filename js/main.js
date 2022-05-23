@@ -47,11 +47,12 @@ let imageback = [
   '../../../imgs/01.jpg',
   '../../../imgs/web-design.jpg',
   '../../../imgs/laptop.webp',
+  '../../../imgs/02.jpg',
 ]
 let header = document.querySelector('header')
-let s = 0
 
 function imgrightscroll() {
+  let s = 0
   let startbackfround = window.setInterval(function () {
     // header.style.backgroundImage = `url(${
     //   imageback[Math.floor(Math.random() * imageback.length)]
@@ -69,7 +70,7 @@ function imgleftscroll() {
   let returnback = setInterval(function () {
     header.style.backgroundImage = `url(${imageback[l - 1]})`
     l--
-    console.log(l)
+    // console.log(l)
     if (l == 0) {
       clearInterval(returnback)
       imgrightscroll()
@@ -145,14 +146,34 @@ bulletparam.addEventListener('click', function (e) {
   })
   localStorage.setItem('bulletshow', e.target.dataset.bullet)
 })
+function activepagestart() {
+  let j = 0
+  let pagescrollbullet = document.querySelectorAll('header .pagescroll span')
+  let activepagestart = window.setInterval(function () {
+    pagescrollbullet.forEach((el) => el.classList.remove('pageactive'))
+    pagescrollbullet[j].classList.add('pageactive')
+    console.log('start' + j)
+    j++
 
-// let pagescrollbullet = document.querySelectorAll('header .pagescroll span')
-// let j = 0
-// let activepage = window.setInterval(function () {
-//   pagescrollbullet.forEach((el) => el.classList.remove('pageactive'))
-//   pagescrollbullet[j].classList.add('pageactive')
-//   j++
-//   if (j == pagescrollbullet.length) {
-//     clearInterval(activepage)
-//   }
-// }, 1000)
+    if (j == pagescrollbullet.length) {
+      clearInterval(activepagestart)
+      activepagereturn()
+    }
+  }, 1000)
+}
+activepagestart()
+function activepagereturn() {
+  let pagescrollbullet = document.querySelectorAll('header .pagescroll span')
+  let j = pagescrollbullet.length - 1
+  let activepagestartreturn = window.setInterval(function () {
+    pagescrollbullet.forEach((el) => el.classList.remove('pageactive'))
+    pagescrollbullet[j].classList.add('pageactive')
+    console.log('end' + j)
+    j--
+    // console.log(j)
+    if (j == -1) {
+      clearInterval(activepagestartreturn)
+      activepagestart()
+    }
+  }, 1000)
+}
