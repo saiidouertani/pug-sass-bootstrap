@@ -78,7 +78,7 @@
       display: none;
     }
     .bulet::before {
-      content: '';
+      content: "";
       position: absolute;
       border: 12.5px solid;
       border-color: transparent transparent transparent var(--main-color);
@@ -91,11 +91,7 @@
 
 header {
   height: 100vh;
-  background-image: url('../../../imgs/laptop-3.webp');
-  background-image: url('../../../imgs/laptop.webp');
-  background-image: url('../../../imgs/web-design.jpg');
-  background-image: url('../../../imgs/01.jpg');
-
+  background-image: url("../../../imgs/laptop-3.webp");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -143,7 +139,8 @@ header {
   opacity: 1 !important;
   border: 1px solid black;
 }
-.pageactive {
+.pageactive,
+.pagebackactive {
   background-color: var(--main-color) !important;
 }
 

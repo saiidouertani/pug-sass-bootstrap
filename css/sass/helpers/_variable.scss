@@ -6,9 +6,10 @@ $greencolor: #198754;
 $redcolor: red;
 $colors: $bluecolor, $yellowcolor, $indigocolor, $greencolor, $redcolor;
 $percentage: 60%, 70%, 75%, 45%, 30%;
-$links: 'About', 'Skills', 'Gallery', 'Timeline', 'Features', 'testimonials';
+$links: "About", "Skills", "Gallery", "Timeline", "Features", "testimonials";
 
 :root {
   --main-color: #{var(--main-color)};
-  --main-size: '11px';
+  --main-size: "11px";
+  --animation-time: 5000;
 }

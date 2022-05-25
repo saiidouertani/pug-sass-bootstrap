@@ -1,6 +1,7 @@
 :root {
   --main-color: var(--main-color);
   --main-size: "11px";
+  --animation-time: 5000;
 }
 
 .clear {
@@ -268,9 +269,6 @@
 header {
   height: 100vh;
   background-image: url("../../../imgs/laptop-3.webp");
-  background-image: url("../../../imgs/laptop.webp");
-  background-image: url("../../../imgs/web-design.jpg");
-  background-image: url("../../../imgs/01.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -339,7 +337,8 @@ header .pagescroll span:not(:first-of-type) {
   border: 1px solid black;
 }
 
-.pageactive {
+.pageactive,
+.pagebackactive {
   background-color: var(--main-color) !important;
 }
 
