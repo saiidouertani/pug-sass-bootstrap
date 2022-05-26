@@ -22,26 +22,12 @@ html(lang='en')
     .ourskills.pt-5.pb-5
       .container
         h2.text-capitalize.text-center Our skills
-        .skill.d-flex.p-3.align-items-center.mt-3
-          h4.me-4 html
-          div.per
-            span(class="d-block" data-percentage="25%")
-        .skill.d-flex.p-3.align-items-center.mt-3
-          h4.me-4 css
-          div.per
-            span(class="d-block" data-percentage="25%")
-        .skill.d-flex.p-3.align-items-center.mt-3
-          h4.me-4 Javascript
-          div.per
-            span(class="d-block" data-percentage="25%")
-        .skill.d-flex.p-3.align-items-center.mt-3
-          h4.me-4 Sass
-          div.per
-            span(class="d-block" data-percentage="25%")
-        .skill.d-flex.p-3.align-items-center.mt-3
-          h4.me-4 Pugjs
-          div.per
-            span(class="d-block" data-percentage="25%")
+        - for (var i=0;i<5;i++)
+          .skill.d-flex.p-3.align-items-center.mt-3
+            h4.me-4=skillsname[i]
+            div.per
+              span(class="d-block per" data-percentage=skills[i])
+
 
     .galerie.pt-5.pb-5
       .container

@@ -78,7 +78,7 @@
   height: 25px;
   display: block;
   border-radius: 50%;
-  background-color: #198754;
+  background-color: #018f12;
 }
 .parameter .color li:nth-child(4):not(:first-of-type) {
   margin-left: 10px;
@@ -377,10 +377,12 @@ header .pagescroll span:not(:first-of-type) {
   height: 30px;
 }
 .ourskills .skill:nth-of-type(1) .per span {
-  width: 60%;
+  width: 0px;
   height: 100%;
-  background-color: #03a9f4;
+  background-color: var(--main-color);
   position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 .ourskills .skill:nth-of-type(1) .per span::after {
   content: "60%";
@@ -414,10 +416,12 @@ header .pagescroll span:not(:first-of-type) {
   height: 30px;
 }
 .ourskills .skill:nth-of-type(2) .per span {
-  width: 70%;
+  width: 0px;
   height: 100%;
-  background-color: #03a9f4;
+  background-color: var(--main-color);
   position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 .ourskills .skill:nth-of-type(2) .per span::after {
   content: "70%";
@@ -451,10 +455,12 @@ header .pagescroll span:not(:first-of-type) {
   height: 30px;
 }
 .ourskills .skill:nth-of-type(3) .per span {
-  width: 75%;
+  width: 0px;
   height: 100%;
-  background-color: #03a9f4;
+  background-color: var(--main-color);
   position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 .ourskills .skill:nth-of-type(3) .per span::after {
   content: "75%";
@@ -488,10 +494,12 @@ header .pagescroll span:not(:first-of-type) {
   height: 30px;
 }
 .ourskills .skill:nth-of-type(4) .per span {
-  width: 45%;
+  width: 0px;
   height: 100%;
-  background-color: #03a9f4;
+  background-color: var(--main-color);
   position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 .ourskills .skill:nth-of-type(4) .per span::after {
   content: "45%";
@@ -525,10 +533,12 @@ header .pagescroll span:not(:first-of-type) {
   height: 30px;
 }
 .ourskills .skill:nth-of-type(5) .per span {
-  width: 30%;
+  width: 0px;
   height: 100%;
-  background-color: #03a9f4;
+  background-color: var(--main-color);
   position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 .ourskills .skill:nth-of-type(5) .per span::after {
   content: "30%";
@@ -568,7 +578,7 @@ header .pagescroll span:not(:first-of-type) {
   position: absolute;
   width: 2px;
   height: 100%;
-  background-color: #03a9f4;
+  background-color: var(--main-color);
   left: 50%;
   top: 0;
   -webkit-transform: translate(-50%);
@@ -580,7 +590,7 @@ header .pagescroll span:not(:first-of-type) {
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
-  background-color: #03a9f4;
+  background-color: var(--main-color);
   color: white;
   padding: 10px;
   border-radius: 5px;
@@ -606,7 +616,7 @@ header .pagescroll span:not(:first-of-type) {
   -webkit-transform: translate(50%);
           transform: translate(50%);
   z-index: 1000;
-  border: 1px solid #03a9f4;
+  border: 1px solid var(--main-color);
 }
 .timeline .box .box-text::before {
   content: "";
@@ -632,7 +642,7 @@ header .pagescroll span:not(:first-of-type) {
     -webkit-transform: translate(50%);
             transform: translate(50%);
     z-index: 1000;
-    border: 1px solid #03a9f4;
+    border: 1px solid var(--main-color);
   }
   .timeline .box .box-text.float-md-start::before {
     content: "";
@@ -657,7 +667,7 @@ header .pagescroll span:not(:first-of-type) {
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
     z-index: 1000;
-    border: 1px solid #03a9f4;
+    border: 1px solid var(--main-color);
   }
   .timeline .box .box-text.float-md-end::before {
     content: "";
@@ -677,8 +687,8 @@ header .pagescroll span:not(:first-of-type) {
 }
 
 .testimonials {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(right, TO), color-stop(blue), color-stop(50%, blue), color-stop(50%, black));
-  background: linear-gradient(TO right, blue, blue 50%, black 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(right, TO), color-stop(var(--main-color)), color-stop(50%, var(--main-color)), color-stop(50%, black));
+  background: linear-gradient(TO right, var(--main-color), var(--main-color) 50%, black 50%);
 }
 .testimonials .cont img {
   width: 100px;

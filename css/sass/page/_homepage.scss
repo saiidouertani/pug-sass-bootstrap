@@ -29,12 +29,14 @@
         width: 100%;
         height: 30px;
         span {
-          width: nth($percentage, $k);
+          // width: nth($percentage, $k);
+          width: 0px;
           height: 100%;
-          background-color: $bluecolor;
+          background-color: var(--main-color);
           position: relative;
+          transition: 1s;
           &::after {
-            content: '#{nth($percentage, $k)}';
+            content: "#{nth($percentage, $k)}";
             position: absolute;
             top: -40px;
             right: 0;
@@ -43,7 +45,7 @@
             color: white;
           }
           &::before {
-            content: '';
+            content: "";
             position: absolute;
             top: -18px;
             right: 0;
@@ -70,11 +72,11 @@
     z-index: 2000;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 2px;
       height: 100%;
-      background-color: $bluecolor;
+      background-color: var(--main-color);
       left: 50%;
       top: 0;
       transform: translate(-50%);
@@ -83,7 +85,7 @@
     .year {
       width: fit-content;
       margin: auto;
-      background-color: $bluecolor;
+      background-color: var(--main-color);
       color: white;
       padding: 10px;
       border-radius: 5px;
@@ -95,17 +97,17 @@
       position: relative;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         @include cercle(20px, white);
         right: 50%;
         top: -40px;
         transform: translate(50%);
         z-index: 1000;
-        border: 1px solid $bluecolor;
+        border: 1px solid var(--main-color);
       }
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: -20px;
         right: 50%;
@@ -116,17 +118,17 @@
       @media (min-width: 769px) {
         &.float-md-start {
           &::after {
-            content: '';
+            content: "";
             position: absolute;
             @include cercle(20px, white);
             right: -30px;
             top: 20px;
             transform: translate(50%);
             z-index: 1000;
-            border: 1px solid $bluecolor;
+            border: 1px solid var(--main-color);
           }
           &::before {
-            content: '';
+            content: "";
             position: absolute;
             top: 20px;
             right: -10px;
@@ -137,17 +139,17 @@
         }
         &.float-md-end {
           &::after {
-            content: '';
+            content: "";
             position: absolute;
             @include cercle(20px, white);
             left: -30px;
             top: 20px;
             transform: translate(-50%);
             z-index: 1000;
-            border: 1px solid $bluecolor;
+            border: 1px solid var(--main-color);
           }
           &::before {
-            content: '';
+            content: "";
             position: absolute;
             top: 20px;
             left: -10px;
@@ -170,7 +172,12 @@
   }
 }
 .testimonials {
-  background: linear-gradient(TO right, blue, blue 50%, black 50%);
+  background: linear-gradient(
+    TO right,
+    var(--main-color),
+    var(--main-color) 50%,
+    black 50%
+  );
 
   .cont {
     img {

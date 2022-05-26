@@ -1,4 +1,4 @@
-let animation_time = 3000;
+let animation_time = 1000;
 
 let iconparam = document.querySelector(".param");
 iconparam.onclick = function () {
@@ -47,39 +47,42 @@ let imageback = [
   "../../../imgs/laptop-3.webp",
   "../../../imgs/table.jpg",
   "../../../imgs/01.jpg",
-  "../../../imgs/istockphoto-1.jpg",
+  "../../../imgs/cat-08.jpg",
   "../../../imgs/laptop.webp",
-  "../../../imgs/02.jpg",
+  "../../../imgs/programming-brain.png",
 ];
 let header = document.querySelector("header");
+let startbackfround;
+let returnback;
+let compt;
 
-function imgrightscroll() {
-  let s = 0;
-  let startbackfround = window.setInterval(function () {
+function imgrightscroll(s) {
+  startbackfround = window.setInterval(function () {
     // header.style.backgroundImage = `url(${
     //   imageback[Math.floor(Math.random() * imageback.length)]
     // })`
     header.style.backgroundImage = `url(${imageback[s]})`;
+    compt = s;
     s++;
-    if (s == imageback.length) {
+    if (s == imageback.length - 1) {
       clearInterval(startbackfround);
-      imgleftscroll();
+      imgleftscroll(imageback.length - 1);
     }
   }, animation_time);
 }
-function imgleftscroll() {
-  let l = imageback.length;
-  let returnback = setInterval(function () {
-    header.style.backgroundImage = `url(${imageback[l - 1]})`;
+function imgleftscroll(l) {
+  returnback = setInterval(function () {
+    header.style.backgroundImage = `url(${imageback[l]})`;
+    compt = l;
     l--;
     // console.log(l)
-    if (l == 0) {
+    if (l == -1) {
       clearInterval(returnback);
-      imgrightscroll();
+      imgrightscroll(1);
     }
   }, animation_time);
 }
-imgrightscroll();
+imgrightscroll(1);
 
 let ulbtn = document.querySelector(".parameter .randbg ul");
 window.onload = function () {
@@ -95,14 +98,24 @@ ulbtn.addEventListener("click", function (e) {
     .querySelectorAll("li")
     .forEach((el) => el.classList.remove("coloractive"));
   if (e.target.dataset.background == "no") {
+    clearInterval(activepagestartin);
+    clearInterval(activepagestartreturnin);
     clearInterval(startbackfround);
+    clearInterval(returnback);
+    console.log(comptpage);
+    console.log(pagescrollbullet[comptpage]);
   }
   if (e.target.dataset.background == "yes") {
-    startbackfround = window.setInterval(function () {
-      header.style.backgroundImage = `url(${
-        imageback[Math.floor(Math.random() * imageback.length)]
-      })`;
-    }, animation_time);
+    console.log(pagescrollbullet[comptpage]);
+    if (pagescrollbullet[comptpage].classList.contains("pageactive")) {
+      console.log("yes");
+      imgrightscroll(comptpage);
+      activepagestart(comptpage);
+    }
+    if (pagescrollbullet[comptpage].classList.contains("pagebackactive")) {
+      imgleftscroll(comptpage);
+      activepagereturn(comptpage);
+    }
   }
   e.target.classList.add("coloractive");
   ulbtn.querySelectorAll("li").forEach(function (el) {
@@ -152,30 +165,30 @@ bulletparam.addEventListener("click", function (e) {
 
 let activepagestartin;
 let activepagestartreturnin;
+let pagescrollbullet = document.querySelectorAll("header .pagescroll span");
+let comptpage;
 function activepagestart(j) {
-  let pagescrollbullet = document.querySelectorAll("header .pagescroll span");
   activepagestartin = window.setInterval(function () {
     pagescrollbullet.forEach((el) => el.classList.remove("pagebackactive"));
     pagescrollbullet.forEach((el) => el.classList.remove("pageactive"));
     pagescrollbullet[j].classList.add("pageactive");
-    console.log("start" + j);
+    comptpage = j;
     j++;
 
     if (j == pagescrollbullet.length - 1) {
       clearInterval(activepagestartin);
-      activepagereturn();
+      activepagereturn(pagescrollbullet.length - 1);
     }
   }, animation_time);
 }
 activepagestart(1);
-function activepagereturn() {
+function activepagereturn(j) {
   let pagescrollbullet = document.querySelectorAll("header .pagescroll span");
-  let j = pagescrollbullet.length - 1;
   activepagestartreturnin = window.setInterval(function () {
     pagescrollbullet.forEach((el) => el.classList.remove("pageactive"));
     pagescrollbullet.forEach((el) => el.classList.remove("pagebackactive"));
     pagescrollbullet[j].classList.add("pagebackactive");
-    console.log("end" + j);
+    comptpage = j;
     j--;
     // console.log(j)
     if (j == 0) {
@@ -184,3 +197,15 @@ function activepagereturn() {
     }
   }, animation_time);
 }
+
+// our skills
+let ourskills = document.querySelector(".ourskills");
+let spanper = ourskills.querySelectorAll(".per");
+
+window.onscroll = function () {
+  if (window.scrollY >= ourskills.offsetTop - 250) {
+    for (i = 0; i < spanper.length; i++) {
+      spanper[i].style.width = spanper[i].dataset.percentage;
+    }
+  }
+};
